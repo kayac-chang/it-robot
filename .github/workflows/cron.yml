@@ -1,0 +1,19 @@
+name: Automation Robot
+on: [push]
+jobs: 
+  run-automation-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@Z
+      - name: install dependencies
+        uses: actions/setup-node@v2
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+        with:
+          args: install
+      - name: run
+        uses: mujo-code/puppeteer-headful@v2
+        env:
+          CI: true
+        with:
+          args: npm test

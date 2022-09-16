@@ -5,7 +5,11 @@ function wait(ms) {
 }
 
 async function main() {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox'],
+    executablePath: process.env.PUPPETEER_EXEC_PATH, // set by docker container
+    headless: false,
+  });
   const page = await browser.newPage();
   await page.goto("https://ithelp.ithome.com.tw/users/20107239/ironman/5652");
 

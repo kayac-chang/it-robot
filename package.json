@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "node main.js"
+  },
   "dependencies": {
     "puppeteer": "^17.1.3",
     "puppeteer-core": "^17.1.3"
