@@ -4,7 +4,7 @@ jobs:
   run-automation-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@Z
+      - uses: actions/checkout@3
       - name: install dependencies
         uses: actions/setup-node@v2
         env:
