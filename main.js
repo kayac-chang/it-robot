@@ -11,7 +11,7 @@ async function main() {
     headless: false,
   });
   const page = await browser.newPage();
-  await page.goto("https://ithelp.ithome.com.tw/users/20107239/ironman/5652");
+  await page.goto("https://ithelp.ithome.com.tw/users/20107239/articles");
 
   let index = 0;
   while (true) {
